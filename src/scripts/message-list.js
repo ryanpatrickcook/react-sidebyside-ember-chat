@@ -1,4 +1,5 @@
 import React from 'react';
+import ChatMessage from './chat-message';
 
 export default React.createClass({
   componentDidUpdate(prevProps, prevState) {
@@ -10,7 +11,7 @@ export default React.createClass({
 
   allMessages() {
     return this.props.messages.map((msg) => {
-      return <div key={msg.id}>{msg.text}</div>;
+      return <ChatMessage key={msg.id} message={msg} />;
     });
   },
 
