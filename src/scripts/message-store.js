@@ -1,7 +1,9 @@
 import EventEmitter from 'events';
 
 const emitter = new EventEmitter();
-var messages = [];
+var messages = [
+  { id: 1, text: 'hello world' }
+];
 
 export default {
   getMessages() {

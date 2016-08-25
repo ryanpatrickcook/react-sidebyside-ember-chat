@@ -5,10 +5,7 @@ import MessageList from './message-list';
 export default React.createClass({
   getInitialState() {
     return {
-      // messages: MessageStore.getMessages()
-      messages: [
-        { id: 1, text: 'hello world' }
-      ]
+      messages: MessageStore.getMessages()
     };
   },
 
