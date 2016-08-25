@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ChatContainer from './chat-container';
 import style from '../styles/main.scss';
 
-ReactDOM.render(<h1 className="title">Hello World</h1>, document.getElementById('app'));
+ReactDOM.render(<ChatContainer title='React Chat'/>, document.getElementById('app'));
