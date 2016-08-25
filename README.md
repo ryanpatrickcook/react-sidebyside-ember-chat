@@ -1,0 +1,1 @@
+# react-sidebyside-ember-chat
