@@ -1,10 +1,14 @@
 import React from 'react';
 import MessageStore from './message-store';
+import MessageList from './message-list';
 
 export default React.createClass({
   getInitialState() {
     return {
-      messages: MessageStore.getMessages()
+      // messages: MessageStore.getMessages()
+      messages: [
+        { id: 1, text: 'hello world' }
+      ]
     };
   },
 
@@ -31,6 +35,7 @@ export default React.createClass({
     return (
       <div className="chat-room">
         <h1>{title}</h1>
+        <MessageList messages={this.state.messages} />
       </div>
     );
   }
