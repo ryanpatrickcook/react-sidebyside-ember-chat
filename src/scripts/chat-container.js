@@ -28,11 +28,15 @@ export default React.createClass({
     MessageStore.newMessage(newMessage);
   },
 
+  headingLabel() {
+    let messageCount = this.state.messages.length;
+    return `App: ${this.props.title} - (${messageCount})`;
+  },
+
   render() {
-    let title = `App: ${this.props.title}`;
     return (
       <div className="chat-room">
-        <h1>{title}</h1>
+        <h1>{this.headingLabel()}</h1>
         <MessageList messages={this.state.messages} />
         <MessageForm addMessage={this.newMessage} />
       </div>
